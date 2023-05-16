@@ -10,21 +10,22 @@ import org.springframework.context.annotation.Bean;
 import java.util.List;
 
 @SpringBootApplication
+
 public class ProductServiceApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ProductServiceApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner commandLineRunner(ProductRepository productRepo){
-        return  args -> {
-            List.of("hpp","acer","tinkpad").forEach(elt->{
-                Product product=new Product();
-                product.setName(elt);
-                product.setWeight(2);
-                productRepo.save(product);
-            });
-        }   ;
-    }
+//    @Bean
+//    CommandLineRunner commandLineRunner(ProductRepository productRepo){
+//        return  args -> {
+//            List.of("hpp","acer","tinkpad").forEach(elt->{
+//                Product product=new Product();
+//                product.setName(elt);
+//                product.setWeight(2);
+//                productRepo.save(product);
+//            });
+//        }   ;
+//    }
 }
