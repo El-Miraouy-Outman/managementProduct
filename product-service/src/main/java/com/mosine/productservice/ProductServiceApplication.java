@@ -16,7 +16,7 @@ public class ProductServiceApplication {
         SpringApplication.run(ProductServiceApplication.class, args);
     }
 
-    @Bean
+    //@Bean
     CommandLineRunner commandLineRunner(ProductRepository productRepo){
         return  args -> {
             List.of("hpp","acer","tinkpad").forEach(elt->{
