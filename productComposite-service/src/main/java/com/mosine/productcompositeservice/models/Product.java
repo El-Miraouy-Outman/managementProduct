@@ -8,7 +8,7 @@ import lombok.Data;
 @Builder
 public class Product {
 
-    private Long id;
+    private Long idproduit;
 
     private String name;
 

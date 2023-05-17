@@ -20,9 +20,9 @@ public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long review_id;
+    private Long idreview;
 
-    private Long product_id;
+    private Long idproduct;
 
     private String author;
 

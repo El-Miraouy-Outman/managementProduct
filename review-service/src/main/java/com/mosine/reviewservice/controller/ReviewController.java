@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/reviews")
 @RequiredArgsConstructor
@@ -19,8 +21,11 @@ public class ReviewController {
 
         reviewService.addReview(reviewRequest);
     }
-
-    @GetMapping("/{id}")
+    @GetMapping("/produit/{id}")
+    public List<Review> findReviewByIdproduct(@PathVariable Long id) {
+    return reviewService.findReviewByIdproduct(id);
+    }
+        @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Review getReview(@PathVariable Long id) {
         return reviewService.getReview(id);

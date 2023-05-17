@@ -24,6 +24,12 @@ public class RecommandationServiceImpl implements RecommandationService{
     }
 
     @Override
+    public List<Recommandation> getByIdproduit(Long id) {
+        System.out.println("service");
+        return recommandationRepository.findRecommandationsByIdproduit(id);
+    }
+
+    @Override
     public List<Recommandation> getAllRecommandations() {
         return recommandationRepository.findAll();
     }

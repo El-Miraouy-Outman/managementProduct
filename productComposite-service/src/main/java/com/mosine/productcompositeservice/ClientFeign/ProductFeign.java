@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@FeignClient(name = "product-service", path = "/api/products", url = "http://localhost:9090/product-service")
+@FeignClient(value = "product-service")
 public interface ProductFeign {
-    @GetMapping("/{idProduct}")
+    @GetMapping("/api/products/{idProduct}")
     public Product getProduct(@PathVariable Long idProduct);
 
-    @PostMapping
+    @PostMapping("/api/products")
     public Product saveProduct(@RequestBody Product product);
 
-    @GetMapping
+    @GetMapping("/api/products")
     public List<Product> getAllProducts();
 }

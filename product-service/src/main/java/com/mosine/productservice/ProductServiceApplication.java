@@ -17,15 +17,15 @@ public class ProductServiceApplication {
         SpringApplication.run(ProductServiceApplication.class, args);
     }
 
-//    @Bean
-//    CommandLineRunner commandLineRunner(ProductRepository productRepo){
-//        return  args -> {
-//            List.of("hpp","acer","tinkpad").forEach(elt->{
-//                Product product=new Product();
-//                product.setName(elt);
-//                product.setWeight(2);
-//                productRepo.save(product);
-//            });
-//        }   ;
-//    }
+    @Bean
+  CommandLineRunner commandLineRunner(ProductRepository productRepo){
+        return  args -> {
+            List.of("hpp","acer","tinkpad").forEach(elt->{
+                Product product=new Product();
+                product.setName(elt);
+                product.setWeight(2);
+                productRepo.save(product);
+            });
+        }   ;
+    }
 }

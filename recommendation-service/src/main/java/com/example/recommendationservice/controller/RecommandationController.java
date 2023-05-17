@@ -18,7 +18,10 @@ public class RecommandationController {
     public Recommandation saveRecommandation(@RequestBody Recommandation recommandation) {
         return recommandationService.saveRecommandation(recommandation);
     }
-
+    @GetMapping("/produit/{id}")
+    public List<Recommandation> getByIdproduit(@PathVariable Long id){
+        return  recommandationService.getByIdproduit(id);
+    }
     @GetMapping("/{idRecommandation}")
     public Recommandation getRecommandation(@PathVariable Long idRecommandation) {
         return recommandationService.getRecommandation(idRecommandation);

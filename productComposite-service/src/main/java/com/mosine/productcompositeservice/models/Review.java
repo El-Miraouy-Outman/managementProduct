@@ -7,9 +7,7 @@ import lombok.Data;
 @Builder
 public class Review {
 
-        private Long review_id;
-
-        private Long product_id;
+        private Long idreview;
 
         private String author;
 
