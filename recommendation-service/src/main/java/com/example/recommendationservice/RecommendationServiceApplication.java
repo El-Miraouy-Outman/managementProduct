@@ -16,7 +16,7 @@ public class RecommendationServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RecommendationServiceApplication.class, args);
 	}
-	@Bean
+	//@Bean
 	CommandLineRunner commandLineRunner(RecommandationRepository recommandationService,RecommandationRepository rp){
 	return args -> {
 //			int i=0;

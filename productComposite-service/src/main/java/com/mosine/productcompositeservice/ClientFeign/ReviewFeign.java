@@ -7,8 +7,10 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 
-@FeignClient(name = "review-service", path = "/api/reviews", url = "http://localhost:9090/review-service")
+
+@FeignClient(value = "review-service")
 public interface ReviewFeign {
 
 
@@ -24,4 +26,6 @@ public interface ReviewFeign {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteReview(@PathVariable Long id);
 
+   @GetMapping("/api/reviews/produit/{id}")
+   public List<Review> findReviewByIdproduct(@PathVariable Long id) ;
 }
